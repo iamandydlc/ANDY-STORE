@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ANDY STORE: libros, manuales, planners y recursos digitales en PDF.">
+<title>ANDY STORE | Productos digitales</title>
+<style>
+:root{--ink:#20243a;--muted:#687087;--purple:#7057d9;--pink:#f3a6c8;--cream:#fbf9ff;--line:#eeeaf7;--green:#20bd68}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fff;color:var(--ink)}
+a{text-decoration:none;color:inherit}.topbar{background:#211b3c;color:#fff;text-align:center;padding:10px 14px;font-size:13px;letter-spacing:.3px}
+header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1160px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:900;letter-spacing:1.2px}.logo span{color:var(--purple)}
+.navlinks{display:flex;gap:24px;color:#62677c;font-size:14px;font-weight:650}.navlinks a:hover{color:var(--purple)}
+.hero{background:radial-gradient(circle at 80% 20%,#f8d9eb 0,transparent 30%),linear-gradient(125deg,#f5f0ff,#fff8fb 55%,#f1f5ff);padding:72px 22px 66px}
+.hero-inner{max-width:1160px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:36px}
+.eyebrow{display:inline-block;background:#fff;border:1px solid #e8defb;color:var(--purple);border-radius:99px;padding:8px 13px;font-size:12px;font-weight:800;letter-spacing:.8px}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.04;letter-spacing:-2px;margin:18px 0 16px}.hero p{font-size:17px;line-height:1.7;color:var(--muted);max-width:560px}
+.primary{display:inline-flex;align-items:center;justify-content:center;background:var(--purple);color:white;padding:14px 22px;border-radius:13px;font-weight:800;box-shadow:0 10px 24px #7057d933;margin-top:12px;transition:.2s}.primary:hover{transform:translateY(-2px);background:#5e46c5}
+.hero-art{position:relative;min-height:300px;display:grid;place-items:center}.hero-art img{width:min(100%,440px);height:300px;object-fit:cover;border-radius:28px;box-shadow:0 24px 60px #47336b2b}
+.float-note{position:absolute;bottom:18px;left:-10px;background:white;padding:14px 18px;border-radius:15px;box-shadow:0 10px 30px #241a3b20;font-weight:800}
+.section{max-width:1160px;margin:auto;padding:66px 22px}.section-head{text-align:center;margin-bottom:30px}.section-head small{color:var(--purple);font-weight:850;letter-spacing:1.5px}.section-head h2{font-size:34px;margin:9px 0}.section-head p{color:var(--muted);margin:0}
+.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:24px 0 30px}.filter{border:1px solid var(--line);background:#fff;color:#5e6378;border-radius:99px;padding:9px 16px;font-weight:700;cursor:pointer}.filter.active,.filter:hover{background:#eee9ff;color:var(--purple);border-color:#ddd3ff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;transition:.25s;box-shadow:0 7px 24px #2e245008}.product:hover{transform:translateY(-5px);box-shadow:0 18px 38px #2e245015}.product img{width:100%;height:205px;object-fit:cover;background:#f3effb;display:block}.product-body{padding:19px}.tag{display:inline-block;background:#f1edff;color:#7057d9;border-radius:7px;padding:5px 8px;font-size:10px;font-weight:900;letter-spacing:.5px}.product h3{font-size:19px;margin:12px 0 7px}.product p{font-size:13px;line-height:1.6;color:var(--muted);min-height:62px;margin:0 0 15px}.buyrow{display:flex;align-items:center;justify-content:space-between;gap:10px}.price{font-size:22px;font-weight:900}.buy{background:#211b3c;color:#fff;border-radius:10px;padding:10px 13px;font-size:12px;font-weight:800}.buy:hover{background:var(--purple)}
+.benefits{background:var(--cream);border-block:1px solid var(--line)}.benefit-grid{max-width:1160px;margin:auto;padding:36px 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.benefit{display:flex;gap:13px;align-items:center}.benefit-icon{width:46px;height:46px;flex:none;border-radius:14px;background:#eee9ff;display:grid;place-items:center;font-size:22px}.benefit b{display:block;font-size:14px}.benefit span{font-size:12px;color:var(--muted)}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:22px;border:1px solid var(--line);border-radius:17px}.step strong{display:grid;place-items:center;width:35px;height:35px;border-radius:11px;background:#eee9ff;color:var(--purple);margin-bottom:12px}.step h3{margin:0 0 7px;font-size:16px}.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+footer{background:#211b3c;color:#fff;padding:36px 22px;text-align:center}footer p{color:#c8c3d7;font-size:13px}.footer-logo{font-weight:900;font-size:22px;letter-spacing:1px}
+.wa-float{position:fixed;right:20px;top:48%;z-index:20;background:#20bd68;color:#fff;padding:13px 17px;border-radius:99px;box-shadow:0 8px 25px #159e543d;font-weight:850;display:flex;align-items:center;gap:8px}.wa-float:hover{background:#159e54}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr}.hero{padding-top:48px}.hero-art{min-height:220px}.hero-art img{height:230px}.float-note{left:5px}.grid{grid-template-columns:repeat(2,1fr)}.navlinks{gap:12px}.benefit-grid{grid-template-columns:1fr;gap:16px}}
+@media(max-width:540px){.nav{padding:13px 16px}.logo{font-size:20px}.navlinks{font-size:12px;gap:10px}.navlinks a:nth-child(2){display:none}.grid{grid-template-columns:1fr}.product img{height:220px}.section{padding:48px 17px}.section-head h2{font-size:28px}.how{grid-template-columns:1fr}.wa-float{right:12px;top:auto;bottom:16px;padding:13px 16px}.hero p{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="topbar">✨ RECURSOS DIGITALES EN PDF · COMPRA FÁCIL Y ATENCIÓN POR WHATSAPP ✨</div>
+<header><nav class="nav">
+  <a class="logo" href="#">ANDY <span>STORE</span></a>
+  <div class="navlinks"><a href="#productos">Productos</a><a href="#como-comprar">Cómo comprar</a><a href="#contacto">Contacto</a></div>
+</nav></header>
+
+<main>
+<section class="hero">
+ <div class="hero-inner">
+  <div>
+   <span class="eyebrow">TU ESPACIO DIGITAL FAVORITO</span>
+   <h1>Ideas que inspiran.<br><span style="color:var(--purple)">Recursos que ayudan.</span></h1>
+   <p>Descubre libros, guías, manuales y herramientas digitales diseñadas para organizarte, aprender y alcanzar tus metas. ¡Elige tu favorito y recíbelo en PDF!</p>
+   <a class="primary" href="#productos">Explorar productos&nbsp; →</a>
+  </div>
+  <div class="hero-art">
+   <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1000&q=85" alt="Libros y cuadernos en un escritorio">
+   <div class="float-note">📚 Aprende a tu ritmo</div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="productos">
+ <div class="section-head"><small>CATÁLOGO ANDY STORE</small><h2>Encuentra tu próximo favorito</h2><p>Productos digitales listos para acompañarte en tu día a día.</p></div>
+ <div class="filters">
+  <button class="filter active" data-filter="todos">Todos</button>
+  <button class="filter" data-filter="organizacion">Organización</button>
+  <button class="filter" data-filter="finanzas">Finanzas</button>
+  <button class="filter" data-filter="aprendizaje">Aprendizaje</button>
+  <button class="filter" data-filter="estilo">Estilo de vida</button>
+ </div>
+ <div class="grid">
+  <article class="product" data-category="finanzas">
+   <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=85" alt="Planificación de finanzas y presupuesto">
+   <div class="product-body"><span class="tag">MÁS VENDIDO</span><h3>Plan de Ahorro 365</h3><p>Convierte tus pequeñas decisiones en grandes avances. Organiza tu presupuesto, registra gastos y sigue un reto de ahorro durante todo el año.</p><div class="buyrow"><span class="price">S/ 19.90</span><a class="buy" href="#" data-product="Plan de Ahorro 365" data-price="S/ 19.90">Pedir ahora ↗</a></div></div>
+  </article>
+  <article class="product" data-category="organizacion">
+   <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=85" alt="Cuaderno y planificación">
+   <div class="product-body"><span class="tag">ORGANÍZATE</span><h3>Planner de Estudio</h3><p>Planifica tus clases, tareas y exámenes con claridad. Un recurso práctico para estudiar con enfoque y aprovechar mejor tu tiempo.</p><div class="buyrow"><span class="price">S/ 14.90</span><a class="buy" href="#" data-product="Planner de Estudio" data-price="S/ 14.90">Pedir ahora ↗</a></div></div>
+  </article>
+  <article class="product" data-category="aprendizaje">
+   <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=85" alt="Persona escribiendo ideas en un cuaderno">
+   <div class="product-body"><span class="tag">EMPRENDIMIENTO</span><h3>Guía para Emprender</h3><p>De la idea al primer paso: define tu propuesta, conoce a tus clientes y organiza un plan sencillo para comenzar tu proyecto.</p><div class="buyrow"><span class="price">S/ 24.90</span><a class="buy" href="#" data-product="Guía para Emprender" data-price="S/ 24.90">Pedir ahora ↗</a></div></div>
+  </article>
+  <article class="product" data-category="estilo">
+   <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=85" alt="Comida saludable preparada">
+   <div class="product-body"><span class="tag">VIDA DIARIA</span><h3>Recetario Fácil</h3><p>Inspírate con ideas sencillas para tus comidas. Organiza tus preparaciones y encuentra nuevas combinaciones para tu semana.</p><div class="buyrow"><span class="price">S/ 12.90</span><a class="buy" href="#" data-product="Recetario Fácil" data-price="S/ 12.90">Pedir ahora ↗</a></div></div>
+  </article>
+  <article class="product" data-category="aprendizaje">
+   <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85" alt="Laptop en un espacio de trabajo">
+   <div class="product-body"><span class="tag">HABILIDADES</span><h3>Manual Básico de Excel</h3><p>Conoce herramientas esenciales, fórmulas y trucos útiles para ordenar información y trabajar de forma más eficiente.</p><div class="buyrow"><span class="price">S/ 19.90</span><a class="buy" href="#" data-product="Manual Básico de Excel" data-price="S/ 19.90">Pedir ahora ↗</a></div></div>
+  </article>
+  <article class="product" data-category="organizacion">
+   <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=900&q=85" alt="Agenda y calendario">
+   <div class="product-body"><span class="tag">PLANIFICA</span><h3>Agenda Digital</h3><p>Ten tus objetivos, pendientes y prioridades en un solo lugar. Una guía visual para darle estructura a tus días.</p><div class="buyrow"><span class="price">S/ 16.90</span><a class="buy" href="#" data-product="Agenda Digital" data-price="S/ 16.90">Pedir ahora ↗</a></div></div>
+  </article>
+ </div>
+ <p style="text-align:center;color:#9296a6;font-size:11px;margin-top:22px">Los precios y productos de ejemplo se pueden editar antes de publicar.</p>
+</section>
+
+<div class="benefits">
+ <div class="benefit-grid">
+  <div class="benefit"><div class="benefit-icon">📩</div><div><b>Entrega digital</b><span>Recibe tu archivo PDF después de confirmar el pago.</span></div></div>
+  <div class="benefit"><div class="benefit-icon">💬</div><div><b>Atención por WhatsApp</b><span>Resuelve tus dudas y coordina tu pedido fácilmente.</span></div></div>
+  <div class="benefit"><div class="benefit-icon">📱</div><div><b>Acceso desde tus dispositivos</b><span>Consulta tus archivos desde celular, tablet o computadora.</span></div></div>
+ </div>
+</div>
+
+<section class="section" id="como-comprar">
+ <div class="section-head"><small>COMPRA EN 3 PASOS</small><h2>¿Cómo recibir tu PDF?</h2><p>Un proceso sencillo y con confirmación directa.</p></div>
+ <div class="how">
+  <div class="step"><strong>1</strong><h3>Elige tu producto</h3><p>Presiona “Pedir ahora” en el producto que deseas y se abrirá WhatsApp con tu pedido preparado.</p></div>
+  <div class="step"><strong>2</strong><h3>Coordina el pago</h3><p>Te enviaremos las indicaciones de pago. Realiza el pago y comparte el comprobante para verificarlo.</p></div>
+  <div class="step"><strong>3</strong><h3>Recibe tu archivo</h3><p>Una vez confirmado el pago, te enviaremos el PDF por WhatsApp.</p></div>
+ </div>
+</section>
+</main>
+<footer id="contacto"><div class="footer-logo">ANDY <span style="color:#c5b6ff">STORE</span></div><p>Pequeños recursos. Grandes posibilidades.</p><p>© <span id="year"></span> ANDY STORE · Todos los derechos reservados.</p></footer>
+
+<a class="wa-float" id="waGeneral" href="https://wa.me/51904026028?text=Hola%20ANDY%20STORE%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos%20digitales." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">☏ WhatsApp</a>
+<script>
+const phone='51904026028';
+function makeMessage(product,price){
+ return `¡Hola ANDY STORE! Quiero pedir: ${product}. Precio: ${price}. ¿Me envías las indicaciones para pagar y recibir el PDF?`;
+}
+document.querySelectorAll('[data-product]').forEach(link=>{
+ link.addEventListener('click',event=>{
+  event.preventDefault();
+  const message=makeMessage(link.dataset.product,link.dataset.price);
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,'_blank','noopener');
+ });
+});
+document.querySelectorAll('.filter').forEach(button=>{
+ button.addEventListener('click',()=>{
+  document.querySelectorAll('.filter').forEach(item=>item.classList.remove('active'));
+  button.classList.add('active');
+  const filter=button.dataset.filter;
+  document.querySelectorAll('.product').forEach(card=>{
+   card.style.display=(filter==='todos'||card.dataset.category===filter)?'':'none';
+  });
+ });
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
